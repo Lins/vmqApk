@@ -82,9 +82,9 @@ public class NeNotificationService2  extends NotificationListenerService {
 
 
                     OkHttpClient okHttpClient = new OkHttpClient();
-                    Request request = new Request.Builder().url("http://"+host+"/appHeart?t="+t+"&sign="+sign).method("GET",null).build();
+                    Request request = new Request.Builder().url("https://"+host+"/appHeart?t="+t+"&sign="+sign).method("GET",null).build();
                     Call call = okHttpClient.newCall(request);
-                    Log.d(TAG, "Url:" + "http://"+host+"/appHeart?t="+t+"&sign="+sign);
+                    Log.d(TAG, "Url:" + "https://"+host+"/appHeart?t="+t+"&sign="+sign);
                     call.enqueue(new Callback() {
                         @Override
                         public void onFailure(Call call, IOException e) {
